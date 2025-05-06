@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp, BookOpen } from "lucide-react"
-import type { Itinerary } from "../context/TripContext"
 
 interface ItineraryItemProps {
   itinerary: Itinerary & { trivia?: string }
