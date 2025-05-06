@@ -7,7 +7,7 @@ interface ItineraryItemProps {
   itinerary: Itinerary & { trivia?: string }
 }
 
-const ItineraryItem = ({ itinerary }: ItineraryItemProps) => {
+const Itinerary = ({ itinerary }: ItineraryItemProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleExpand = () => {
@@ -53,4 +53,4 @@ const ItineraryItem = ({ itinerary }: ItineraryItemProps) => {
   )
 }
 
-export default ItineraryItem
+export default Itinerary
