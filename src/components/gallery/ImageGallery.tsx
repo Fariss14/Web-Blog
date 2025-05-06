@@ -23,16 +23,19 @@ interface ImageGalleryProps {
   images: GalleryImage[]
   title?: string
   columns?: number
-  gap?: number
   aspectRatio?: "square" | "video" | "portrait" | "auto"
 }
 
-export function ImageGallery({ images, title, columns = 3, gap = 4, aspectRatio = "square" }: ImageGalleryProps) {
+export function ImageGallery({
+  images,
+  title,
+  columns = 3,
+  aspectRatio = "square",
+}: ImageGalleryProps) {
   const [index, setIndex] = useState(-1)
   const [visibleImages, setVisibleImages] = useState<number[]>([])
   const galleryRef = useRef<HTMLDivElement>(null)
 
-  // Format images for the lightbox
   const slides = images.map((image) => ({
     src: image.src,
     alt: image.alt,
@@ -40,10 +43,8 @@ export function ImageGallery({ images, title, columns = 3, gap = 4, aspectRatio 
     description: image.description || "",
   }))
 
-  // Determine grid columns class
   const gridColsClass = `cols-${columns}`
 
-  // Handle scroll animation
   useEffect(() => {
     const handleScroll = () => {
       if (!galleryRef.current) return
@@ -52,14 +53,11 @@ export function ImageGallery({ images, title, columns = 3, gap = 4, aspectRatio 
       const isVisible = rect.top < window.innerHeight && rect.bottom >= 0
 
       if (isVisible) {
-        // Mark all images as visible for animation
         setVisibleImages(Array.from({ length: images.length }, (_, i) => i))
       }
     }
 
-    // Initial check
     handleScroll()
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [images.length])
