@@ -1,0 +1,310 @@
+.print-page {
+    padding: var(--spacing-8) 0;
+    background-color: var(--color-background);
+  }
+  
+  .print-header {
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: var(--spacing-6);
+  }
+  
+  .print-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    margin-bottom: var(--spacing-2);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--color-primary);
+  }
+  
+  .print-subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .print-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-6);
+    font-family: var(--font-serif);
+    color: var(--color-text-secondary);
+  }
+  
+  .print-actions {
+    margin-top: var(--spacing-6);
+  }
+  
+  .print-button {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    border: none;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .print-button:hover {
+    background-color: var(--color-accent-light);
+  }
+  
+  .print-overview {
+    margin-bottom: var(--spacing-12);
+    padding: var(--spacing-6);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .print-section-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-2);
+    color: var(--color-primary);
+  }
+  
+  .print-lead {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.6;
+  }
+  
+  .print-lead::first-letter {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    float: left;
+    line-height: 0.8;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    color: var(--color-accent);
+  }
+  
+  .print-day {
+    margin-bottom: var(--spacing-12);
+    padding: var(--spacing-6);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    position: relative;
+  }
+  
+  .print-day-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-2);
+    color: var(--color-primary);
+  }
+  
+  .print-day-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-secondary);
+  }
+  
+  .print-day-image {
+    margin-bottom: var(--spacing-6);
+    position: relative;
+  }
+  
+  .print-day-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    /* Day image size: 1200px × 600px (2:1 ratio) */
+    max-height: 600px;
+    object-fit: cover;
+  }
+  
+  .print-image-caption {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--color-surface-light);
+    border: 1px solid var(--color-border);
+    border-top: none;
+    color: var(--color-text-secondary);
+  }
+  
+  .print-day-description {
+    margin-bottom: var(--spacing-6);
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  
+  .print-itineraries-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-2);
+    color: var(--color-primary);
+  }
+  
+  .print-itineraries {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .print-itinerary {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    background-color: var(--color-surface-light);
+  }
+  
+  .print-itinerary-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    padding: var(--spacing-3) var(--spacing-4);
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    margin: 0;
+  }
+  
+  .print-itinerary-content {
+    padding: var(--spacing-4);
+  }
+  
+  .print-itinerary-image {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .print-itinerary-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    /* Itinerary image size: 400px × 300px (4:3 ratio) */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  
+  .print-itinerary-description {
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  
+  .print-reflection {
+    margin-top: var(--spacing-6);
+    padding: var(--spacing-4);
+    background-color: var(--color-surface-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .print-reflection-title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    text-align: center;
+    color: var(--color-primary);
+  }
+  
+  .print-reflection-content {
+    font-family: var(--font-serif);
+    font-style: italic;
+    line-height: 1.6;
+    padding: 0 var(--spacing-4);
+    border-left: 3px solid var(--color-accent);
+    margin: 0;
+    color: var(--color-text);
+  }
+  
+  .print-page-number {
+    text-align: center;
+    font-style: italic;
+    margin-top: var(--spacing-6);
+    font-family: var(--font-serif);
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-4);
+  }
+  
+  .print-footer {
+    margin-top: var(--spacing-12);
+    padding-top: var(--spacing-6);
+    border-top: 2px solid var(--color-primary);
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-secondary);
+  }
+  
+  @media (min-width: 768px) {
+    .print-meta {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .print-itineraries {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Actual print styles */
+  @media print {
+    .print-page {
+      padding: 0;
+    }
+  
+    .print-actions {
+      display: none;
+    }
+  
+    .print-day {
+      page-break-after: always;
+      border: none;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  
+    .print-overview {
+      border: none;
+      padding: 0;
+    }
+  
+    .print-itineraries {
+      grid-template-columns: 1fr;
+    }
+  
+    .print-itinerary {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  
+    .print-reflection {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+  
