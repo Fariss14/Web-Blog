@@ -3,8 +3,16 @@
 import { useState } from "react"
 import { ChevronDown, ChevronUp, BookOpen } from "lucide-react"
 
+// Define Itinerary type locally or import from types file
+interface Itinerary {
+  title: string
+  description: string
+  image?: string
+  trivia?: string
+}
+
 interface ItineraryItemProps {
-  itinerary: Itinerary & { trivia?: string }
+  itinerary: Itinerary
 }
 
 const ItineraryItem = ({ itinerary }: ItineraryItemProps) => {
@@ -24,7 +32,9 @@ const ItineraryItem = ({ itinerary }: ItineraryItemProps) => {
       </div>
 
       <div
-        className={`mt-4 transition-all duration-300 ${isExpanded ? "opacity-100 max-h-[2000px]" : "opacity-0 max-h-0 overflow-hidden"}`}
+        className={`mt-4 transition-all duration-300 ${
+          isExpanded ? "opacity-100 max-h-[2000px]" : "opacity-0 max-h-0 overflow-hidden"
+        }`}
       >
         <div className="grid md:grid-cols-2 gap-6">
           <div className="relative h-64 rounded-lg overflow-hidden">
@@ -48,6 +58,7 @@ const ItineraryItem = ({ itinerary }: ItineraryItemProps) => {
             )}
           </div>
         </div>
+        
       </div>
     </div>
   )
